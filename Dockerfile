@@ -12,7 +12,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 SHELL ["/bin/bash", "-c"]
 
-ENV GO_VERSION 1.7
+ENV GO_VERSION 1.10
 
 RUN curl -s -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer | bash
 
@@ -21,7 +21,10 @@ RUN . /root/.gvm/scripts/gvm && \
       gvm use go1.4 && \
       gvm install go1.5 && \
       gvm install go1.6 && \
-      gvm install go1.7
+      gvm install go1.7 && \
+      gvm install go1.8 && \
+      gvm install go1.9 && \
+      gvm install go1.10
 
 ENV WATCHER_VERSION 0.2.4
 
